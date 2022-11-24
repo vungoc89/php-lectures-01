@@ -16,19 +16,20 @@ function show_data($data){
 }
 
 //if($_SERVER['REQUEST_METHOD'] == 'POST'){ //vs GET thi ko dung cach nay
+//vì khi enter trên url thì data vẫn đang truyền xuống(?)
 //-> Dung isset kiem tra btn_search da ton tai(da click hay chua)
-if(isset($_POST['btn_search'])){
-    show_data($_POST); 
+if(isset($_GET['btn_search'])){
+    show_data($_GET); 
 
-    $tim_kiem = $_POST['tim_kiem'];
+    $tim_kiem = $_GET['tim_kiem'];
     echo $tim_kiem;
 }
 
 //GET DỮ LIỆU TỪ URL
 
-$mod = $_POST['mod'];
-$act = $_POST['act'];
-$id = $_POST['id'];
+$mod = $_GET['mod'];
+$act = $_GET['act'];
+$id = $_GET['id'];
 echo "{$mod}-{$act}-{$id}";
 ?>
 
@@ -44,7 +45,7 @@ echo "{$mod}-{$act}-{$id}";
         
         <div class="form-container">
             <h1>SEARCH: </h1>
-            <form action="" method="POST"> 
+            <form action="" method="GET"> 
                 Search: <input type="text" name="tim_kiem"/>
                 <input type="submit" name="btn_search" value="search"/>
             </form>

@@ -43,9 +43,9 @@ if(isset($_POST['btn_login'])){
     }else{
         $password = $_POST['password'];
     }
-   $username = $_POST['username'];
-   $password = $_POST['password'];
-//   echo "{$username} - {$password}";
+//   $username = $_POST['username'];
+//   $password = $_POST['password'];
+   echo "{$username} - {$password}";
 
    
    if(empty($error)){
