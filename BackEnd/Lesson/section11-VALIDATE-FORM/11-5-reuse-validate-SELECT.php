@@ -7,6 +7,8 @@
  * 
  * Cach viet thong bao loi kieu 2: de the <?php o ngoai, <p></p> o trong
  * <?php if(!empty($error['gender'])) echo "<p class='error'>{$error['gender']}</p> <br>" ?>
+ * 
+ * NOTE: FILE NÀY VẪN CHƯA REFACTOR NHƯ FILE 11-5-reuse-validate.php
  */
 function show_data($data){
     if(is_array($data)){
