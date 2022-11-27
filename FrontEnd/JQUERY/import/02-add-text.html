@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+CU PHAP CODE JQUERY
+Cú pháp: $(selector).action();
+-> $: viết tắt(chữ ký) of jquery
+-> selector: tập hợp phần tử html cẫn xử lý
+-> action: method xử lý các đối tượng liệt kê ở selector
+-> Kết thúc câu lệnh bằng dấu chấm phẩy
+-->
+<html>
+    <head>
+        <title>Add jquery to website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>THis is a lesson about jquery</h1>
+        <p>First name: <span class="first-name" ></span> </p>
+        <p>Last name: <span class="last-name" ></span> </p>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                //Bai 2: Them text vao the p/span
+                $('p span.first-name').text('Tony');
+                $('p span.last-name').text('Jaa');
+            });
+
+        </script>
+    </body>
+
+</html>

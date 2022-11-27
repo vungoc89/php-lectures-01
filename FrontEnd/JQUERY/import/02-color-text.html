@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+CU PHAP CODE JQUERY
+Cú pháp: $(selector).action();
+-> $: viết tắt(chữ ký) of jquery
+-> selector: tập hợp phần tử html cẫn xử lý
+-> action: method xử lý các đối tượng liệt kê ở selector
+-> Kết thúc câu lệnh bằng dấu chấm phẩy
+-->
+<html>
+    <head>
+        <title>Add jquery to website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>Change color of text use jquery</h1>
+        
+        <p class="p-text">Change color of text use jquery</p>
+
+        <button style="background-color: red;" id="btn-red">Red</button>
+        <button style="background-color: greenyellow;" id="btn-green">Green</button>
+        
+        
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('button#btn-red').click(function(){
+                    $('p.p-text').css('color', 'red');
+                });
+                
+                $('button#btn-green').click(function(){
+                    $('p.p-text').css('color', 'green');
+                });
+ 
+                
+            });
+
+        </script>
+    </body>
+
+</html>
