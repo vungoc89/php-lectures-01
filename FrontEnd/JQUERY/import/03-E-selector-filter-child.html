@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+NHOM SELECTOR LỌC THEO PHẦN TỬ CON
+STT     SYNTAX                   DESC (ele mean element)
+1.      $(':first-child')        Chon ALL ele là con ĐẦU TIÊN của selector cha được chỉ định
+2.      $(":last-child")         Chon ALL ele là con CUỐI CÙNG của selector cha được chỉ định
+
+3.      $(":nth-child(index/even/odd/equation")           
+Chon ALL ele là con của ele cha tuân theo :nth-child lọc theo chỉ số/chẵn/lẻ/hoặc 1 ph trình 1 ẩn.
+
+4.      $(":only-child")     Chọn ALL ele là con duy nhất của ele cha được chỉ định.
+
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div><h1>Selector theo cấp con</h1></div>
+        
+        <ul class="post-list">
+            <li>Content 1</li>
+            <li>Content 2</li>
+            <li>Content 3</li>
+            <li>Content 4</li>
+            <li>Content 5</li>
+            <li>Content 6</li>
+            <li>Content 7</li>
+            <li>Content 8</li>
+            <li>Content 9</li>
+        </ul>
+        
+        <ul class="post-list">
+            <li>Content only child</li>
+        </ul>
+        
+        <script>
+            $(document).ready(function () {
+//                1.Chọn content đầu tiên và set color
+//$("ul.post-list li:first-child").css('color', 'aqua');
+
+//                2.Chọn content cuoi cung và set color
+//$("ul.post-list li:last-child").css('color', 'aqua');
+
+//                3.Chọn theo even/odd
+//$("ul.post-list :nth-child(even)").css('color', 'aqua');
+
+//                4.Chọn cac the chia het cho 3
+//$("ul.post-list :nth-child(3n)").css('color', 'aqua');
+
+//                4.Chọn ele là con duy nhất của ele cha
+$("ul.post-list li:only-child").css('color', 'aqua');
+
+
+            });
+        </script>
+    </body>
+</html>
+

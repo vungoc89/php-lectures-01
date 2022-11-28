@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+NHOM METHOD FIND , FILTER
+STT     SYNTAX                          DESC (ele mean element)
+
+1.      .eq(index)                  Định vị ele trong selector với chỉ số xác định
+                               
+2.      .not(selector)              Loại bỏ tập hợp các ele được định nghĩa bởi selector trong tập hợp các ele trong selector
+
+3.      .filter(selector)           Giới hạn tập ele trong selector bởi bộ lọc các ele in selector
+
+4.      .next(selector)             Định vị đến ele tiếp theo cùng cấp của mỗi ele in selector HOẶC được xđ bởi selector
+
+5.      .nextAll(selector)          Định vị đến ALL các ele trong cùng cấp of các ele in selector OR được xđ bởi selector
+
+6.      .pre(selector)              Định vị đến ele PHÍA TRƯỚC cùng cấp of mỗi ele in selector OR được xđ bởi selector
+
+7.      .preAll(selector)           Định vị đến ALL các ele PHÍA TRƯỚC cùng cấp of các ele in selector OR được xđ bởi selector
+
+8.      .is(selector)               Kiểm tra số lượng ele được LỌC bởi selector in tập các ele trong selector. Method trả
+                                    về TRUE nếu ít nhất một ele đúng, else return FALSE
+
+9.      .find(selector)             Tìm ALL các ele là con cháu of các ele trong bộ chọn được xđ bởi selector
+
+10.     .children( [selector] )     Tìm ALL các ele con of bộ chọn trong html, có thể được LỌC bởi selector
+
+11.     .parent( [selector] )       Tìm ALL các ele là CHA TRỰC TIẾP of các ele trong bộ chọn, có thể được LỌC bởi selector
+
+12.     .parents( [selector] )      Tìm ALL các ele là TỔ TIÊN of các ele trong bộ chọn, có thể được LỌC bởi selector
+
+
+
+
+-->
+<!--Emmet doc html: type ! and TAB -->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <style type="text/css">
+            input{
+                display: block;
+                margin:  10px 0;
+            }
+        </style>
+        
+        <div><h1>Phuong thuc xu ly</h1></div>
+
+        <form action="action" id="form_login" method="post">
+            <label for="username">Username</label>
+            <input type="text" name="username" value="" id="username"/>
+           
+            
+            <label for="password">Password</label>
+            <input type="password" name="password" value="" id="password"/>
+            
+            <input type="submit" name="btn_login" value="Login" id="password"/>
+            
+           <!--Cach 1: hien thi truc tiep-->
+<!--            <p>Username:<strong id="val_username"></strong> </p>
+            <p>Password:<strong id="val_password"></strong> </p>-->
+            
+            <!--Cach 2: hien thi gian tiep-->
+            <div id="result">
+                
+            </div>
+        </form>
+        
+        <script>
+            $(document).ready(function () {
+                //When click btn Login => print info user(name and pass)
+                $('#form_login').submit(function(){
+                     //val
+                    var username = $('#username').val();
+                    var password = $('#password').val();
+//                    alert(username+ '-' +password);
+
+//                    alert($('#val_username').text());
+//                  Cach 1: hien thi truc tiep
+                    $('#val_username').text(username);
+                    $('#val_password').text(password);
+                    
+//                    alert($('#result')).html();
+                    //Cach 2: hien thi gian tiep
+                    var text_result;
+                    text_result  = "\n\<p>Username:<strong id='val_username'>"+username+"</strong> </p> <p>Password:<strong id='val_password'>"+password+"</strong> </p>";
+                    $("#result").html(text_result);
+                    
+                    return false; // ĐỂ ko bị toggle(prevent reload) sang trang khác sau khi alert
+                });
+               
+               
+            });
+        </script>
+    </body>
+</html>
+

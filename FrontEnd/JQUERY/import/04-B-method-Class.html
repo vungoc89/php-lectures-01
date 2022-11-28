@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<!--
+NHOM METHOD ABOUT CLASS 
+STT     SYNTAX                          DESC (ele mean element)
+
+1.      .addClass(className)            Add 1 or many class into each ele in selector
+
+2.      .removeClass(className)         Delete 1, many or all class of ele... in selector
+
+3.      .toggleClass(className)         Add or delete 1, many class of ele... 
+
+4.      .hasClass(className)            Check exist of class in selected ele
+
+
+-->
+<!--Emmet doc html: type ! and TAB -->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <style type="text/css">
+            .highlight{
+                color: red;
+                background: greenyellow;
+            }
+        </style>
+        
+        <div><h1>Phuong thuc xu ly thuoc tinh</h1></div>
+
+        <!--emmet: p{Content $}*5 -->
+        <p>Content 1</p>
+        <p>Content 2</p>
+        <p>Content 3</p>
+        <p>Content 4</p>
+        <p>Content 5</p>
+        
+        <script>
+            $(document).ready(function () {
+//                Click tag p va set color
+                $('p').click(function(){
+//                    $(this).css({color:'red', background:'yellow'}); //C1: truc tiep
+//                    $(this).addClass('highlight'); //C2: use method addClass
+                      
+                     if(!$(this).hasClass('highlight')){
+                         $('p').removeClass('highlight');
+                         $(this).addClass('highlight');
+                     }
+                })
+               
+            });
+        </script>
+    </body>
+</html>
+

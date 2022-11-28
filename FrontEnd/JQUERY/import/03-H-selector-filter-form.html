@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+NHOM SELECTOR LỌC THEO LOẠI (TYPE)
+STT     SYNTAX                     DESC (ele mean element)
+
+1.      $(":button)             Chon ALL ele có type button
+
+2.      $(":checkbox")          Chon ALL ele có type checkbox
+
+3.      $(":password")          Chon ALL ele có type password
+
+4.      $(":input")             Chon ALL các input, textarea, select, button => 
+                                đều gọi chung là phần tử input
+
+5.      $(":file")              Chon ALL ele có type file
+
+6.      $(":radio)              Chon ALL ele có type radio
+
+7.      $(":selected")          Chon ALL ele là option được selected
+
+8.      $(":text")              Chon ALL ele có type text
+
+9.      $(":enabled")           Chon ALL ele enabled
+
+10.     $(":disabled")          Chon ALL ele disabled
+
+
+-->
+<!--Emmet doc html: type ! and TAB -->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <style type="text/css">
+            form *{
+                display: block;
+                margin-bottom: 10px;
+            }
+        </style>
+        <div><h1>Selector theo loại</h1></div>
+
+        <form>
+
+            <!--emmet : inp[type=text] (see on: https://docs.emmet.io/cheat-sheet/ )-->
+            <input type="text" name="inp_tex" id="inp_1"/>
+
+            <input type="password" name="inp_pas" disabled="disabled" id="inp_2">
+            <input type="checkbox" class="hobby" value="game" id="inp_31" />
+            <input type="checkbox" class="hobby" value="shop" checked="checked" id="inp_32"/>
+            <input type="checkbox" class="hobby" value="book" checked="checked" id="inp_33"/>
+            
+            <input type="radio" name="inp_rad"  id="inp_4">
+
+            <!--emmet: tarea (see on: https://flaviocopes.com/emmet/ )-->
+            <textarea name="inp_tex" id="tar_1" cols="30" rows="10"></textarea>
+
+            <button>Button</button>
+            <input type="submit" name="inp_" id="inp_5">
+            <input type="file" name="inp_" id="inp_6">
+
+            <select name="inp_sel" id="inp_7">
+                <option value="">Options</option>
+                <option value="">PHP</option>
+                <option selected="selected" value="">Jquery</option>
+            </select>
+        </form>
+        <script>
+            $(document).ready(function () {
+                //                1. ĐẾm số input trên form
+//                var num_input = $("form :input").length;
+//                alert(num_input); // 9
+               
+               // 2. Input pass => set background red
+//               $("form :password").css('border', '3px solid red');
+               
+               // 3. Dem so luong ele select duoc chon
+//               var input_selected = $("form :selected");
+//               console.log(">>>input selected",input_selected);
+               //>>>input selected S.fn.init [option, prevObject: S.fn.init(1)]
+//               input_selected.each(function(){
+//                   alert($(this).text()); // Jquery
+//               });
+               
+               // 4. Dem so luong ele checkbox duoc chon
+               var input_checked = $("form :checkbox:checked");
+               console.log(">>>input checked",input_checked);
+               //>>>input checked S.fn.init [prevObject: S.fn.init(1)]
+               input_checked.each(function(){
+                   alert($(this).val()); // val return thuoc tinh value cua ele input
+               });
+               
+               $("form :disabled").css('border', '3px solid aqua');
+               $("form :enabled").css('border', '3px solid greenyellow');
+            });
+        </script>
+    </body>
+</html>
+

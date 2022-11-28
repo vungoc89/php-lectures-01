@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+NHOM METHOD ABOUT VALUE
+STT     SYNTAX                          DESC (ele mean element)
+
+1.      .val()                  Get value hiện tại của ele đầu tiên trong bộ chọn 
+                                (Apply for form: input, select, checkbox...)
+
+2.      .val(value)             Set value cho ele đầu tiên trong bộ chọn
+
+3.      .text                   Lấy và kết hợp ALL các text của các ele trong bộ chọn
+
+4.      .text(value)            Set content là value cho mỗi ele trong bộ chọn
+
+5.      .html()                 Get content thẻ html of ele đầu tiên trong bộ chọn
+
+6.      .html(stringHtml)       Set nội dung html(stringHtml) cho ALL các ele trong selector
+
+-->
+<!--Emmet doc html: type ! and TAB -->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <style type="text/css">
+            input{
+                display: block;
+                margin:  10px 0;
+            }
+        </style>
+        
+        <div><h1>Phuong thuc xu ly</h1></div>
+
+        <form action="action" id="form_login" method="post">
+            <label for="username">Username</label>
+            <input type="text" name="username" value="" id="username"/>
+           
+            
+            <label for="password">Password</label>
+            <input type="password" name="password" value="" id="password"/>
+            
+            <input type="submit" name="btn_login" value="Login" id="password"/>
+            
+           <!--Cach 1: hien thi truc tiep-->
+<!--            <p>Username:<strong id="val_username"></strong> </p>
+            <p>Password:<strong id="val_password"></strong> </p>-->
+            
+            <!--Cach 2: hien thi gian tiep-->
+            <div id="result">
+                
+            </div>
+        </form>
+        
+        <script>
+            $(document).ready(function () {
+                //When click btn Login => print info user(name and pass)
+                $('#form_login').submit(function(){
+                     //val
+                    var username = $('#username').val();
+                    var password = $('#password').val();
+//                    alert(username+ '-' +password);
+
+//                    alert($('#val_username').text());
+//                  Cach 1: hien thi truc tiep
+                    $('#val_username').text(username);
+                    $('#val_password').text(password);
+                    
+//                    alert($('#result')).html();
+                    //Cach 2: hien thi gian tiep
+                    var text_result;
+                    text_result  = "\n\<p>Username:<strong id='val_username'>"+username+"</strong> </p> <p>Password:<strong id='val_password'>"+password+"</strong> </p>";
+                    $("#result").html(text_result);
+                    
+                    return false; // ĐỂ ko bị toggle(prevent reload) sang trang khác sau khi alert
+                });
+               
+               
+            });
+        </script>
+    </body>
+</html>
+

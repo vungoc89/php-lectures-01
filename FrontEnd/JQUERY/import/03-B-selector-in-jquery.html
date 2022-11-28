@@ -22,10 +22,17 @@ Stt Syntax              Desc
 -> 2.Nhóm selector theo thuộc tính
 Stt Syntax                          Desc
 1   $("[attribute * = 'value']")    Chọn all element vs attribute có giá trị chứa value.
-2   $("[attribute | = 'value']")    Chọn all element vs attribute có giá trị là value HOẶC theo sau value là dấu gạch ngang.  
+2   $("[attribute | = 'value']")    Chọn all element vs attribute có giá trị là value HOẶC theo sau value là 1 dấu gạch ngang.  
 3   $("[attribute ~ = 'value']")    Chọn all element vs attribute có giá trị chứa value và CÁCH PHẦN GIÁ TRỊ CẠNH NÓ BỞI KHOẢNG TRẮNG
 4   $("[attribute $ = 'value']")    Chọn all element vs attribute có giá trị KẾT THÚC bởi value.
 5   $("[attribute ^ = 'value']")    Chọn all element vs attribute có giá trị BẮT ĐẦU bởi value.
+
+6   $("[attribute = 'value']")      Chọn all element vs attribute có giá trị CHÍNH XÁC bởi value.
+7   $("[attribute ! = 'value']")    Chọn all element vs attribute có giá trị KO PHẢI bởi value.
+8   $("[attribute]")                Chọn all element vs attribute VS GIÁ TRỊ BẤT KỲ
+
+9   $("[attributeFilter1,attributeFilter2, attributeFilterN ]")     
+Chọn all element bao gồm all các thuộc tính attributeFilter1,attributeFilter2, attributeFilterN
 -->
 <html>
     <head>

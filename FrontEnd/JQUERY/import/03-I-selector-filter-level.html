@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+NHOM SELECTOR LỌC THEO LOẠI (TYPE)
+STT     SYNTAX                     DESC (ele mean element)
+
+1.      $(":parent>child)          Chon ALL ele child là con trực tiếp của parent
+
+2.      $(":ancestor descedant")   Chon ALL ele descedant là con cháu được xđ bởi ancestor
+
+3.      $("prev + next")           Chon ALL next cùng cấp đứng ngay sau prev
+
+4.      $("prev ~ next")           Chon ALL các ele next đằng sau kế tiếp prev
+
+
+-->
+<!--Emmet doc html: type ! and TAB -->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <style type="text/css">
+            form input{
+                display: block;
+                margin-bottom: 10px;
+            }
+        </style>
+        <div><h1>Selector theo cấp bậc</h1></div>
+
+        <!--emmet: ul>li*5>a[href="Menu $"]-->
+      
+        <ul id="main-menu">
+            <li><a href="">Menu 1</a></li>
+            <li><a href="">Menu 2</a>
+                <ul class="sub-menu">
+                    <li><a href="">Menu 2.1</a></li>
+                    <li><a href="">Menu 2.1</a></li>
+                    <li><a href="">Menu 2.1</a></li>
+                </ul>
+            </li>
+            <li><a href="">Menu 3</a></li>
+            <li><a href="">Menu 4</a></li>
+            <li><a href="">Menu 5</a></li>
+        </ul>
+        
+        <form action="">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username">
+            
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email">
+        </form>
+      
+        <script>
+            $(document).ready(function () {
+            //                1. All menu => set color
+//                $("#main-menu a").css('color','aqua');
+                
+                //             2. All menu level 1 => set color
+//                $("#main-menu>li>a").css('color','aqua');
+                
+                //             3. In gia tri of input "Da co label" neu no co label o tren
+//                $("#main-menu>li>a").css('color','aqua');
+//                $("form label + input").val("Da co label");
+                
+                //             3. All input sau lable co value "Da co label"
+//                $("#main-menu>li>a").css('color','aqua');
+                $("form label ~ input").val("Da co label");
+ 
+            });
+        </script>
+    </body>
+</html>
+

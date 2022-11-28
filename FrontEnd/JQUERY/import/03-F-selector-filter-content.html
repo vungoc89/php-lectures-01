@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+NHOM SELECTOR LỌC THEO NỘI DUNG
+STT     SYNTAX                     DESC (ele mean element)
+1.      $(":contains(text))        Chon ALL ele có chứa nội dung text xác định.
+
+2.      $(":empty")                Chon ALL ele có content empty bao gồm KO CÓ text or các thẻ như input, img, br, hr
+
+3.      $(":has(selector)")        Chon ALL ele có ÍT NHẤT một ele con có selector xác định
+
+4.      $(":parent")               Chọn các ele có ÍT NHẤT một ele con có thẻ text hoặc phần tử html
+
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div><h1>Selector theo cấp con</h1></div>
+        
+        <ul class="post-list">
+            <li>Content 1</li>
+            <li></li>
+            <li>
+                <ul>
+                    <li class="color">Phan tu 2.1</li>
+                    <li>Phan tu 2.2</li>
+                </ul>
+            </li>
+            <li>Content 3</li>
+            <li>
+                <ul>
+                    <li>Phan tu 4.1</li>
+                    <li>Phan tu 4.2</li>
+                </ul>
+            </li>
+<!--            <li>Content 4</li>-->
+            <li>Content 5</li>
+            <li>Content 6</li>
+            <li>Content 7</li>
+            <li>Content 8</li>
+            <li>Content 9</li>
+        </ul>
+        
+        <ul class="post-list">
+            <li>Content only child</li>
+        </ul>
+        
+        <script>
+            $(document).ready(function () {
+//                1.Tìm ele KO CÓ nội dung => set border
+//$("ul li:empty").css('border', '1px solid #ccc');
+//$("ul li:empty").text('Ko co content').css('color', 'aqua');
+
+//                2.Tìm ele có nội dung "Content" => set color
+//$("ul li:contains('Content')").css('color', 'aqua');
+
+//                3.Tìm ALL ele có phan tu con, hoac co noi dung => set color
+//$("ul li:parent").css('color', 'aqua');
+
+//                4.Tìm ele có it nhat ele con la selector cho truoc => set color
+$("ul:has('.color')").css('border', '1px solid aqua');
+
+
+
+            });
+        </script>
+    </body>
+</html>
+

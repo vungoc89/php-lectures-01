@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<!--
+-> selector: tập hợp phần tử html cẫn xử lý
+$(selector).action();
+CAC NHOM SELECTOR
+-> 1.Nhóm selector cơ bản
+-> 2.Nhóm selector theo thuộc tính
+-> 3.Nhóm selector định vị
+-> 4.Nhóm selector lọc theo phần tử con
+-> 5.Nhóm selector lọc theo nội dung
+-> 6.Nhóm selector về form
+-> 7.Nhóm selector về cấu trúc cấp bậc
+
+-> 1.Nhóm selector cơ bản
+Stt Syntax              Desc
+1   $(element)          Chọn tag html
+2   $('.className')     Chọn all class có tên = className
+3   $('#idName')        Chọn ele có tên = idName
+4   $('*')              Chọn all phần tử html
+5   $(F, G, H)          Hợp kq các bộ chọn thành phần F, G, H
+
+-> 2.Nhóm selector theo thuộc tính
+Stt Syntax                          Desc
+1   $("[attribute * = 'value']")    Chọn all element vs attribute có giá trị chứa value.
+2   $("[attribute | = 'value']")    Chọn all element vs attribute có giá trị là value HOẶC theo sau value là 1 dấu gạch ngang.  
+3   $("[attribute ~ = 'value']")    Chọn all element vs attribute có giá trị chứa value và CÁCH PHẦN GIÁ TRỊ CẠNH NÓ BỞI KHOẢNG TRẮNG
+4   $("[attribute $ = 'value']")    Chọn all element vs attribute có giá trị KẾT THÚC bởi value.
+5   $("[attribute ^ = 'value']")    Chọn all element vs attribute có giá trị BẮT ĐẦU bởi value.
+
+6   $("[attribute = 'value']")      Chọn all element vs attribute có giá trị CHÍNH XÁC bởi value.
+7   $("[attribute ! = 'value']")    Chọn all element vs attribute có giá trị KO PHẢI bởi value.
+8   $("[attribute]")                Chọn all element vs attribute VS GIÁ TRỊ BẤT KỲ
+
+9   $("[attributeFilter1,attributeFilter2, attributeFilterN ]")     
+Chọn all element bao gồm all các thuộc tính attributeFilter1,attributeFilter2, attributeFilterN
+-->
+<html>
+    <head>
+        <title>Add jquery to website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h1>THis is a lesson about jquery</h1>
+
+        <!--
+        
+        -->
+        
+        <h1>Menu website</h1>
+        <a href="home.html" title="Trang chu">Trang chu</a><br>
+        <a href="about.html" title="Gioi thieu">Gioi thieu</a><br>
+        <a href="product-clothes.html" title="Quan ao">Quan ao</a><br>
+        <a href="product-shoes.html" title="Giay dep">Giay dep</a><br>
+        <a href="productfruits.html" title="Hoa qua">Hoa qua</a><br>
+        <a href="contact.html" title="Lien he">Lien he</a><br>
+
+        
+        <script type="text/javascript">
+            $(document).ready(function () {
+               //1.To mau aqua cho trang chu
+               $("a[href='home.html']").css('color', 'aqua');
+               
+               //2.Tô màu green cho all các ele menu KO phải là trang chủ
+               $("a[href!='home.html']").css('color', 'blue');
+               
+               //3.Get all menu product va theo sau vs dau -
+               $("a[href|='product']").css('color', 'gold');
+               
+               //4.Get all menu product va set color = red
+//               $("a[href*='product']").css('color', 'red');
+//               
+               //5.Get all menu bat dau = product va set color
+//               $("a[href^='product']").css('color', 'red');
+//               
+               //6.Get all menu ket thuc = clothes va set color
+//               $("a[href $='clothes']").css('color', 'red');
+//               
+               //7.Get all menu co title chua tu "Trang" va xung quanh co space va set color
+//               $("a[title ~='Trang']").css('color', 'red');
+//               
+               //8.Get all menu co href va set color
+//               $("a[href]").css('color', 'red');
+//               
+               //9.Get all product co 2 từ trở lên và set color
+//               $("a[href*='product'][title*=' ']").css('color', 'red');
+               
+
+               
+               
+            });
+
+        </script>
+    </body>
+
+</html>
+

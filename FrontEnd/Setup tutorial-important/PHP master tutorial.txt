@@ -1,0 +1,82 @@
+//================== PHIM TAT CODE TREN NETBEAN =============
+1. SHIFT + ALT + F => FORMAT CAN CHINH CODE NGAY NGAN
+2. CTRL + SHIFT + down-arrow => COPY 1 DONG/1 DOAN CODE
+3. CTRL + H => FIND AND REPLACE one/all a word
+4. CTRL + SHIFT + click => multiple cursor
+5. CTRL + E => delete a line/multiple-line
+6: CTRL + J => chọn một loạt từ giống nhau
+
+Xem hướng dẫn các key shortcuts tại:
+https://defkey.com/netbeans-shortcuts
+https://defkey.com/visual-studio-code-windows-shortcuts#8755
+
+//==============CÁC PLUGIN ĐÃ CÀI CHO NETBEANS 8.2============================================
+1. Autosave => down file "1461631914_org-remikz-netbeans-AutoSaveModified.nbm" (NetBeans-8.2-AutoSave-Fix.zip)
+
+2. Emmet => down file "org-lorenzos-emmet-1.1.2.nbm" tại https://github.com/emmetio/netbeans/releases 
+(chú ý: chọn đúng version vì mỗi phiên bản file .nbm tương ứng với mỗi phiên bản Netbeans khác nhau)
+Emmet doc: https://docs.emmet.io/abbreviations/syntax/
+
+=> Sau đó để trigger(thực hiện) code emmet ta dùng 1 trong 2 cách sau: 
+1.Dùng tổ hợp phím: CTRL + ALT + N
+2.Dùng phím TAB
+Trên giao diện Netbeans:
+Vào Tools => Option => Miscellaneous > Emmet tab => Tích vào ô vuông ở đầu dòng "Expand abbreviations with the TAB key"
+//====================================================================================================================
+vqN@981131 /
+PASS ACCESS GITHUB: 
+
+1.Về nội dung phần 29: website ISMART
+Đến video 29.15, instructor có bảo là phần sau làm về phân quyền user 
+nhưng trên content bài giảng ko thấy có ?
+
+=> Để xem phần này thì xem link sau: 
+Kênh: An dn - Php Training
+Bài 26: Hướng dẫn tạo quản trị thành viên, phân quyền thành viên trong PHP - Phần 1
+https://www.youtube.com/watch?v=lXhJZ1uOwHM&list=PLbdAsYeJMKkaLe2MMhz2v1keiiAox-lxo&index=34
+
+Kênh: https://www.youtube.com/@ThayHoFpoly
+
+Kênh: https://www.youtube.com/@hieutancodeproject/playlists => web vs Laravel 263 videos
+(chỉ hiện 200 videos, 63 videos thì phải mua)
+
+Gõ on youtube: php web bán hàng => hàng chục kênh với playlist hướng dẫn làm project.
+
+Các bài 29.16 => 29.22 và Phần 30:Làm việc với dữ liệu đa cấp trong website
+=> Ko có trên gdrive => xem trên kênh unitop youtube
+
+KHóa Học ReactJS-Redux-Nodé của Nguyễn Đức Việt ở kênh youtube: Học lập trình web app mobile
+https://www.youtube.com/@hoclaptrinhwebappmobile5939/playlists
+
+KÊNH TIẾNG VIỆT CŨNG RẤT HAY ĐỂ XEM NODEJS VÀ Microservices BACKEND
+https://www.youtube.com/@anonystick/playlists
+
+Cách sử dụng PHPMailer để gửi Email: do google đã khóa Less secure app access để đảm bảo security 
+=> xem video sau: đã xử lý được và gửi được mail (mail dùng để gửi vẫn bật xác nhận 2 lớp và vẫn gửi được)
+và password được gg sinh random (nên ko cần dùng password của mail of user).
+Kênh youtube tiếng Việt: Cat Dragon - https://www.youtube.com/watch?v=uAVL07p8cmc
+
+Gửi mail với giao diện form: kênh yt Dave Hollingworth
+Send email with PHP | Create a Working Contact Form Using PHP -> https://www.youtube.com/watch?v=fIYyemqKR58
+
+Gửi mail với giao diện form + AJAX: kênh yt Coding Snow
+Create a PHP Send Email Contact Form - using PHPMailer - Step by Step -> https://www.youtube.com/watch?v=DKq1n-awLcw
+
+//====================== CẤU HÌNH CKFINDER => XEM LINK SAU: ===========================
+https://ckeditor.com/docs/ckeditor4/latest/guide/dev_ckfinder_integration.html
+
+//====================== XỬ LÝ LỖI KO CHẠY ĐƯỢC CKFINDER ===========================
+https://ckeditor.com/docs/ckfinder/ckfinder3-php/system_requirements.html
+Ngoài việc đọc "CKFinder requirements for PHP" 
+=> Ta phải kích hoạt "GD extension" như sau: 
+Đi vào ổ C => xampp => php => mở file php.ini (by notepad)
+=> tìm ;extension=gd (Ctrl + F) => xóa dấu ; (uncomment) 
+=> Save => Tắt xampp => mở lại xampp => OK
+
+Create signup form use PHP
+https://www.youtube.com/playlist?list=PLS1QulWo1RIZc4GM_E04HCPEd_xpcaQgg
+
+https://www.youtube.com/@CodingNepal/playlists => JS projects 111 videos => co code for download 
+
+REST API PHP
+https://www.youtube.com/playlist?list=PLS1QulWo1RIYWjdoEC1WbT8W3XGGWVXfW (13 videos)

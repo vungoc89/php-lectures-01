@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+NHOM SELECTOR ĐỊNH VỊ
+ STT    SYNTAX               DESC (ele mean element)
+1.      $(':eq(index)')      Chon ele tai vi tri co chi so index trong tap hop cac ele cua bộ chọn
+2.      $(":first")          Chon ele tai vi tri dau tien trong tap hop cac ele cua bo chon
+3.      $(":last")           Chon ele tai vi tri cuoi cung trong tap hop cac ele cua bo chon
+4.      $(":gt(index)")      Chon ALL ele trong bo chon co chi so LỚN HƠN index
+5.      $(":lt(index)")      Chon ALL ele trong bo chon co chi so NHỎ HƠN index
+
+6.      $(":odd")            Chon ALL ele trong bo chon nằm ở vị trí co chi so LẺ
+7.      $(":even")           Chon ALL ele trong bo chon nằm ở vị trí co chi so CHẴN
+8.      $(":not(selector)")  Chon ALL ele trong bo chon KO THUỘC vào selector được chỉ định.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div>Selector theo định vị</div>
+        <p>Content 0</p>
+        <p>Content 1</p>
+        <p>Content 2</p>
+        <p>Content 3</p>
+        <p>Content 4</p>
+        <p>Content 5</p>
+        <p>Content 6</p>
+
+        <div class="box">
+            <p>Content 7</p>
+            <p>Content 8</p>
+            <p>Content 9</p>
+        </div>
+
+        <a href="">Link 1</a>
+        <a href="">Link 2</a>
+        <script>
+            $(document).ready(function () {
+                //1. Chon phan tu p co chi so = 1 => red
+//               $("p:eq(1)").css('color', 'red');
+
+//               $("a:eq(1)").css('color', 'red');
+
+                //2. Chon ele p dau tien  => mau red
+//               $("p:first").css('color', 'aqua');
+//               
+                //3. Chon ele p cuoi cung  => mau red
+//               $("p:last").css('color', 'orange');
+//               
+                //4. Chon ele p co index > 1  => mau red
+//                $("p:gt(1)").css('color', 'greenyellow');
+//               
+                //5. Chon trong class="box" ele p co chi so = 1 => set color
+//                $("div.box p:eq(1)").css('color', 'greenyellow');
+//               
+                //6. Chon phan tu p co chi so < 3 => set color
+//                $("p:lt(3)").css('color', 'greenyellow');
+//               
+                //7. Chon phan tu p co chi so odd => set color
+//                $("p:odd").css('color', 'greenyellow');
+//               
+                //8. Chon phan tu p co chi so even => set color
+//                $("p:even").css('color', 'greenyellow');
+//               
+                //9. Chon ALL phan tu p ngoai tru chi so = 2 => set color
+//                $("p:not(p:eq(2))").css('color', 'greenyellow');
+
+
+            });
+        </script>
+    </body>
+</html>
