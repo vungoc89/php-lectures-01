@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+CHANGE event ap dung cho textarea, input text, select
+
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <style>
+            input, select, textarea{
+                display: block;
+                margin-bottom: 20px;
+                
+            }
+        </style>
+        <h1>Event CHANGE in jquery</h1>
+       
+        <form action="action" method="post">
+            <input type="text" name="form_inp" id="form_inp">
+            <select id="form_sel">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            
+            <textarea id="form_tarea" cols="30" rows="10">
+                
+            </textarea>
+        </form>
+        
+        <a href="" id="other">Active</a>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+              $('input#form_inp').change(function(){
+                  alert($(this).val());
+              });
+              
+              $('select#form_sel').change(function(){
+                  alert($(this).val());
+              });
+              
+              $('textarea#form_tarea').change(function(){
+                  alert($(this).val());
+              });
+              
+              $('#other').click(function(){ //Khi click 'Active' thi ham change cua select#form_sel se thuc hien
+                  $('select#form_sel').change();
+                  return false; //prevent reload
+              });
+              
+              
+            });
+        </script>
+    </body>
+</html>

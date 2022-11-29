@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+NHOM METHOD FIND , FILTER
+STT     SYNTAX                          DESC (ele mean element)
+
+1.      .css(propertyName)             Get value thuộc tính css propertyName of ele đầu tiên trong selector
+                               
+2.      .css(propertyName, value)      Set 1 or many thuộc tính propertyName có giá trị value cho ALL các ele trong selector
+
+-->
+<!--Emmet doc html: type ! and TAB -->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <style type="text/css">
+            .box{
+                padding: 50px 100px;
+                background: #ccc;
+                color: red;
+                float: left;
+            }
+        </style>
+        
+        <div><h1>Phuong thuc xu ly</h1></div>
+
+        <div class="box">
+            BOX
+        </div>
+        
+        <p>Background:<span id="bground"></span></p>
+        <p>Padding:<span id="padding"></span></p>
+        
+        
+        <script>
+            $(document).ready(function () {
+                $('.box').click(function(){
+                    $(this).css({background: 'red', padding: '100px 200px',color: 'yellow'});
+                    $('#bground').text($(this).css('background')); //display info background at p tag after click box
+                    $('#padding').text($(this).css('padding')); //display info padding at p tag after click box
+                })
+            });
+        </script>
+    </body>
+</html>
+

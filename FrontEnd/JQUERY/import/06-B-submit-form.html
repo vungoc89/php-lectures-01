@@ -1,0 +1,48 @@
+
+
+
+<!DOCTYPE html>
+<!--
+.hover(handlerIn, handlerOut)
+.hover(handlerInOut)
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <style>
+            input{
+                display: block;
+                margin-bottom: 15px;
+            }
+        </style>
+        <h1>Event HOVER in jquery</h1>
+        <form id="form_login" action="">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+            
+            <label for="password">Password</label>
+            <input type="text" name="password" id="password">
+            
+            <input type="submit" name="inp_login" value="Login">
+        </form>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("form#form_login").submit(function(){
+                    var username, password;
+                    username = $('#username').val();
+                    password = $('#password').val();
+                    
+                    alert(username+"-"+password);
+//                    console.log(username+"-"+password);
+                    return false;
+                })
+            });
+        </script>
+    </body>
+</html>

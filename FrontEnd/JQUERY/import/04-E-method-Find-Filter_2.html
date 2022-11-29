@@ -49,42 +49,49 @@ STT     SYNTAX                          DESC (ele mean element)
         </style>
         
         <div><h1>Phuong thuc xu ly</h1></div>
-
-        <p>Content 1</p>
-        <p class="light">Content 2</p>
-        <p>Content 3</p>
-        <p>Content 4</p>
-        <p class="light">Content 5</p>
-        
+        <!--emmet: ul#main-menu>li*6>a{Menu $}-->
+        <ul id="main-menu">
+            <li><a href="">Menu 1</a></li>
+            <li><a href="">Menu 2</a>
+                <ul class="sub-menu">
+                    <li><a href="">Menu 2.1</a></li>
+                    <li><a href="">Menu 2.2</a></li>
+                    <li><a href="">Menu 2.3</a></li>
+                    <li><a href="">Menu 2.4</a></li>
+                    <li><a href="">Menu 2.5</a></li>
+                </ul>
+            </li>
+            <li><a href="">Menu 3</a></li>
+            <li><a href="">Menu 4</a>
+                <ul class="sub-menu">
+                    <li><a href="">Menu 4.1</a></li>
+                    <li><a href="">Menu 4.2</a></li>
+                    <li><a href="">Menu 4.3</a></li>
+                    <li><a href="">Menu 4.4</a></li>
+                    <li><a href="">Menu 4.5</a></li>
+                </ul>
+            </li>
+            <li><a href="">Menu 5</a></li>
+            <li><a href="">Menu 6</a></li>
+        </ul>
         <script>
             $(document).ready(function () {
              //1. eq
-//               $('p').eq(2).css('color', 'red');
+             $("#main-menu li").click(function(){//=> CLICK TO SET COLOR
+//                $(this).children('.sub-menu').show();
+//                $(this).children('.sub-menu').find('a').css('color', 'red');
+             });
                
-             //2. not
-//               $('p').not('.light').css('color', 'aqua');
-               
-             //3. filter
-//               $('p').filter('.light').css('color', 'greenyellow');
-               
-             //4. next
-//               $('p').filter('.light').next().css('color', 'greenyellow');
-               
-               
-             //5. nextAll
-//               $('p').filter('.light').nextAll().css('color', 'greenyellow');
-               
-               $('p').eq(0).nextAll('.light').css('color', 'greenyellow');
-               
-               
-             //6. pre
-//               $('p').filter('.light').pre().css('color', 'greenyellow');
+             //2. eq
+             $("#main-menu a").click(function(){//=> CLICK TO SET COLOR
+//                $(this).parent('li').parent('ul').css('background', 'aqua');
+//                
+                $(this).parents('ul').css('border', '3px solid red');
 
-            $('p').click(function(){
-                if($(this).is('.light')){
-                    alert('This is light text');
-                }
-            });
+                return false;
+             });
+               
+
             });
         </script>
     </body>

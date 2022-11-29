@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+NHOM METHOD FIND , FILTER
+STT     SYNTAX                          DESC (ele mean element)
+
+1.      .show(seconds, func())          Display ele (
+                               
+2.      .hide()                         Set HIdden ele
+
+3.      .toggle()               HIdden or display ele base on state
+
+1.      .fadeIn()               Hiện dần ele
+                               
+2.      .fadeOut()              Ẩn dần ele
+
+3.      .fadeToggle()           HIện dần and ẩn dần ele base on state
+
+
+
+
+-->
+<!--Emmet doc html: type ! and TAB -->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <style type="text/css">
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            /*COPY COLORS CODE: https://flatuicolors.com/palette/defo*/
+            #box{
+                width: 400px;
+                padding: 40px;
+                background: #3498db;
+                text-align: center;
+                color: white;
+                font-size: 18px;
+                display: none;
+            }
+            .btn{
+                min-width: 150px;
+                height: 50px;
+                border: 3px solid greenyellow;
+                font-size: 25px;
+                color: white;
+            }
+/*            .btn a{
+                color: white;
+            }*/
+            .btn-fadeIn{
+                background: #2ecc71;
+            }
+            .btn-fadeOut{
+                background: #0097e6;
+            }
+            .btn-fadeToggle{
+                background: #e67e22;
+            }
+        </style>
+        
+        <div><h1>Phuong thuc xu ly show , hide</h1></div>
+        
+        <button class="btn btn-fadeIn">
+            <!--<a href="" id="effect-show">Show</a>-->
+            Fade Show
+        </button>
+        <button class="btn btn-fadeOut">
+             <!--<a href="" id="effect-hide">Hide</a>-->
+             Fade Hide
+        </button>
+        <button class="btn btn-fadeToggle">
+            <!--<a href="" id="effect-toggle">Toggle</a>-->
+            Fade Toggle
+        </button>
+        
+       
+        
+        <div id="box">
+            BOX
+        </div>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, excepturi labore maxime in odit quas possimus suscipit quia minus recusandae. Dolores, reiciendis, nesciunt, ab alias molestias velit consequatur sequi quis voluptates nemo voluptatibus autem laboriosam numquam voluptate harum maiores quidem provident! Animi provident nihil expedita eaque sint voluptate totam molestiae.</p>
+        
+        <script>
+            $(document).ready(function () {
+                $('.btn-fadeIn').click(function(){
+                    $('#box').fadeIn(1000, function(){
+                        alert('Show ok');
+                    });
+                });
+                $('.btn-fadeOut').click(function(){
+                    $('#box').fadeOut(1000, function(){
+                        alert('Hide ok');
+                    });
+                });
+                $('.btn-fadeToggle').click(function(){
+                    $('#box').fadeToggle(1000, function(){
+                        alert('Toggle ok');
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
+

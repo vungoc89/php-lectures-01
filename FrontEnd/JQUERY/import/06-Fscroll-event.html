@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+NHOM METHOD FIND , FILTER
+STT     SYNTAX                          DESC (ele mean element)
+
+1.      .scroll(Top)            Get khoảng cách vị trí of scroll vs ele first in selector theo phương thẳng đứng.
+                               
+2.      .scrollTop(value)       Set khoảng cách value of scroll vs ele first theo phương thẳng đứng.
+
+3.      .scrollLeft()           Get khoảng cách vị trí of scroll vs ele first in selector theo phương thẳng ngang.
+
+4.      .scrollLeft(value)      Set khoảng cách value of scroll vs ele first theo phương thẳng ngang.
+
+5.      .position()             Get vị trí tương đối of selector absolute so vs ele cha relative bao gồm 
+                                top, left, .position().top, .position().left
+
+6.      .offset()               Get vị trí tương đối of selector so vs DOCUMENT bao gồm 
+                                top, left, .offset().top, .offset().left
+
+
+-->
+<!--Emmet doc html: type ! and TAB -->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <style type="text/css">
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            #wrap{
+                /*width: 960px;*/
+                width: 1500px;
+                margin: 0 auto;
+            }
+            body{
+                font-size: 14px;
+         
+               
+                font-family: arial;
+                line-height: 25px;
+                
+                
+            }
+            #header, #footer{
+                padding: 20px 0;
+                background: #333;
+                color: #fff;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            #content{
+                padding: 20px 0;
+                position: relative;
+            }
+            #content p{
+                margin-bottom: 15px;
+            }
+            
+            .widget{
+                width: 100px;
+                height: 50px;
+                background: red;
+                position: absolute;
+                top: 50px;
+                left: 200px;
+            }
+        </style>
+        
+        <!--<div><h1>Phuong thuc xu ly</h1></div>-->
+
+        <div id="wrap">
+            <div id="header">
+                Header
+            </div>
+            <div id="content">
+                <!--emmet: p*5>lorem100-->
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, eum atque quo doloremque ex officia impedit nulla quae placeat dicta veritatis blanditiis repudiandae voluptatibus aperiam ducimus veniam tenetur. Id, illum, vero, fuga incidunt non fugit in quae architecto cum rerum repellat laboriosam blanditiis eligendi adipisci unde labore nemo delectus. Commodi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, vitae enim dolorem sequi a ipsum non velit voluptatum suscipit aspernatur facilis labore earum quod id quidem ratione sapiente vero voluptas sed debitis voluptatem aliquam consequuntur iure delectus dolorum corrupti quos rerum distinctio iusto atque soluta saepe assumenda veritatis veniam architecto officia porro harum hic dolore fuga. Minima, molestiae, perspiciatis odit officia nesciunt nihil magnam earum autem rerum tempora corrupti praesentium explicabo cumque similique adipisci reiciendis corporis doloribus ipsa porro dicta ipsam non at. Incidunt, ad, vel, quas molestiae mollitia eum quaerat in fugiat cum quae modi reprehenderit placeat alias? Itaque?</p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, aliquam, adipisci culpa maxime reiciendis quisquam eligendi et error laboriosam reprehenderit! Esse, eveniet, provident, molestias saepe voluptates facere vitae quidem amet est similique ipsum ducimus a accusantium asperiores delectus. Aut, nihil deserunt temporibus fugiat soluta illo vel numquam nobis maiores labore. Tempore explicabo veritatis pariatur nihil beatae similique consectetur temporibus nostrum natus quibusdam! Quae pariatur iste ullam temporibus eligendi. Eveniet, delectus impedit expedita quidem minus accusamus quod quam hic repellendus labore? Modi excepturi doloremque repudiandae eum. Ipsa ipsum minus pariatur magni. Libero, maxime, adipisci molestias aperiam dolor quas alias velit fuga reprehenderit saepe architecto similique nemo tempora illum hic dolorem nulla maiores ea perspiciatis quisquam asperiores delectus debitis repellat officia recusandae. Veniam, itaque, natus, vel ut explicabo non dolor perspiciatis obcaecati quia ipsa dicta praesentium magnam ea aut ducimus architecto alias quaerat ad consectetur perferendis quos beatae eligendi mollitia facilis voluptatibus.</p>
+                <div class="widget">
+                    WIDGET
+                </div>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, ullam, hic, aut, possimus culpa optio repudiandae repellendus debitis incidunt sit sapiente animi accusantium ipsam aliquid alias. Quis, voluptas, doloremque provident eaque at quo consequuntur doloribus nisi culpa accusamus dolore porro hic perspiciatis praesentium sed placeat id. Consequuntur quos totam voluptates. Quam, modi, reiciendis, iure, quaerat aut porro assumenda vel omnis ut est odio praesentium consequatur fuga eveniet deleniti ab perspiciatis laborum sint quasi libero! Expedita, facere, ab, excepturi eligendi at quasi delectus quis odit perspiciatis dolorem eos accusantium molestias! Molestias, minima, qui, nisi, delectus aspernatur soluta molestiae repellat minus numquam sed est iste ex totam sint atque esse rerum nostrum tempora incidunt eum. Veniam, consequuntur, est, consectetur, saepe eveniet voluptatum ipsa suscipit accusamus animi molestias et asperiores odio. Mollitia, optio, animi nesciunt voluptates praesentium aliquam sapiente pariatur amet maiores reiciendis itaque quibusdam impedit cupiditate nobis explicabo dolorum officiis excepturi iste.</p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, a, itaque sed modi nemo perspiciatis sint veritatis temporibus veniam fugit culpa quam impedit molestias unde nam accusantium eligendi sunt sapiente sit laudantium distinctio aut eum non fuga repellendus esse vel perferendis odio consequatur? Aliquid, soluta quas suscipit facere ducimus omnis! Rem, atque, dolorem molestias culpa facere perspiciatis perferendis veniam corporis voluptatem eaque deserunt explicabo nesciunt distinctio sed amet minus omnis doloribus accusantium. Veniam, sequi asperiores sit pariatur et iure! Enim, similique voluptatem eveniet provident dolor laudantium rem velit adipisci delectus fugit. Nesciunt, totam, ab, voluptas, ut ex rem sequi sapiente neque mollitia nulla officiis omnis distinctio voluptatum ipsum assumenda provident accusantium eius quod veritatis dolore! Excepturi, obcaecati, provident, ut a vitae sapiente voluptate hic consequuntur dolor modi distinctio facere aliquid accusantium saepe ea quaerat earum natus eos omnis molestiae vero adipisci suscipit. Aut assumenda ipsa eius rerum possimus repudiandae labore.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, hic, culpa, nesciunt in quia excepturi dolores voluptatem unde adipisci cupiditate consequatur eius et iste mollitia alias blanditiis sapiente necessitatibus. Ab, maiores, eveniet, sed iure ducimus eum vero optio accusantium hic alias quod fuga rem dolor velit dolores nesciunt omnis molestiae. Deleniti laudantium dolorum quibusdam consequatur ad voluptatum modi blanditiis est repudiandae at. A, necessitatibus, aspernatur, temporibus, cupiditate harum dolorem aliquid in quaerat voluptatum veritatis inventore doloremque placeat rem aut tempora consequatur aliquam enim et vero reprehenderit. Incidunt, optio, blanditiis, consectetur illo quo voluptatum hic inventore accusamus asperiores impedit iusto atque labore nostrum! Corrupti, atque, cum, reiciendis, laudantium ducimus saepe sed blanditiis provident commodi quidem numquam debitis dicta accusamus alias id illo consequatur vel repudiandae itaque voluptate esse obcaecati ea doloremque porro eos. Itaque aut labore deserunt! Perferendis, officiis dignissimos aspernatur quidem ut quibusdam maiores quis blanditiis nisi saepe dicta laboriosam?</p>
+            </div>
+            <div id="footer">
+                Footer
+            </div>
+        </div>
+        
+        <!--div>div>p.01+p.02^p.03-->
+        <div>
+            <div>
+                <p class="01"></p>
+                <p class="02"></p>
+            </div>
+            <p class="03"></p>
+        </div>
+
+        <!--div>div>p.01+p.02^^p.03-->
+        <div>
+            <div>
+                <p class="01"></p>
+                <p class="02"></p>
+            </div>
+        </div>
+        
+        <p class="03"></p>
+        <script>
+            $(document).ready(function () {
+               var window_scroll_top, window_scroll_left;
+               
+              $(window).scrollTop(200);
+               
+              $(window).scroll(function(){
+                  window_scroll_top = $(window).scrollTop();
+//                   console.log(window_scroll_top);
+                   
+                  window_scroll_left = $(window).scrollLeft();
+//                   console.log(window_scroll_left);
+                   
+                   console.log(window_scroll_top + '-' +window_scroll_left);
+                   
+                   var content_top = $('#content').offset().top;
+                   console.log(content_top);
+                   
+//                   Them div wigdget de tinh pos
+                    var widget_top, widget_left;
+                    widget_top = $('.widget').position().top;
+                    widget_left = $('.widget').position().left;
+                    console.log('widget top = ',widget_top); //50
+                    console.log('widget left = ',widget_left); //200
+                   return false;//prevent reload
+              })
+            });
+        </script>
+    </body>
+</html>
+

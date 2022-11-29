@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+RESIZE event giup ta thuc thi cac func khi thay doi 
+size cua ele.(thuong ap dung cho resize trinh duyet)
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <style>
+            input, select, textarea{
+                display: block;
+                margin-bottom: 20px;
+                
+            }
+        </style>
+        <h1>Event RESIZE in jquery => chua show kq</h1>
+       
+        <p id="resize">
+            Width of browser:
+            <span id="result"></span>
+        </p>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+             var size_w, size_p;
+
+             $(window).resize(function (){
+                 size_w = $(window).width();
+                $('#reside span#result').text(size_w+'px');
+             });
+            });
+        </script>
+    </body>
+</html>

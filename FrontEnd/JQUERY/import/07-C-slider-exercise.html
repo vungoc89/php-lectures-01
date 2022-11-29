@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+        <link href="css/slider.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+
+        <!--<img src="images/sqlg1.PNG" alt=""/>-->
+        <div id="wrapper">
+            <h1>Slider demo</h1>
+
+            <div id="wp-slider">
+                <div id="show">
+                    <img src="images/sqlg1.PNG" alt="">
+                </div>
+                <!--div#wp-list-thumb>ul#id-thumb>(li>a[href=""]>img[src="images"])*4-->
+                <div id="wp-list-thumb">
+                    <ul id="list-thumb">
+                        <li><a href=""><img src="images/sqlg2.PNG" alt=""></a></li>
+                        <li><a href=""><img src="images/sqlg1.PNG" alt=""></a></li>
+                        <li><a href=""><img src="images/sqlg4.PNG" alt=""></a></li>
+                        <li><a href=""><img src="images/sqlg3.PNG" alt=""></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+         <script>
+            $(document).ready(function () {
+               var src_img_click, src_img_first;
+               src_img_first = $("#list-thumb li:first-child img").attr('src');
+                $("#show img").attr('src', src_img_first);
+               
+               $("#list-thumb li a").click(function(){
+                   src_img_click = $(this).children('img').attr('src');
+                   
+                   $("#show img").attr('src', src_img_click);
+                   
+                   $("#list-thumb li").removeClass('active');
+                   $(this).parent('li').addClass('active');
+                   
+                   return false;
+               });
+            });
+        </script>
+    </body>
+
+
+</html>

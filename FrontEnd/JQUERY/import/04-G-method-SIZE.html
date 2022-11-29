@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+NHOM METHOD FIND , FILTER
+STT     SYNTAX                          DESC (ele mean element)
+
+1.      .height()            Get value height of ele dau tien trong selector
+                               
+2.      .height(value)       Set height to ALL ele in selector
+
+3.      .innerHeight()       Get value height of first ele in selector include padding
+
+4.      .outerHeight()       Get value height of first ele in selector include padding, border
+
+5.      .width()             Get value width of ele dau tien trong selector
+
+6.      .width(value)        Set width to ALL ele in selector
+
+7.      .innerWidth()        Get value width of first ele in selector include padding
+
+8.      .outerWidth()        Get value width of first ele in selector include padding, border
+-->
+<!--Emmet doc html: type ! and TAB -->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.6.1.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <style type="text/css">
+            .box{
+              width: 200px;
+              /*height: 100px;*/
+              min-height: 100px;
+              margin: 20px 0;
+              border: 5px solid #ccc;
+            }
+            #box01{
+                padding: 10px 20px;
+            }
+/*            #box02{
+                min-height: 100px;
+            }*/
+        </style>
+        
+        <div><h1>Phuong thuc xu ly</h1></div>
+
+        <div class="box" id="box01">BOX 1</div>
+        <div class="box" id="box02">BOX 2
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, saepe, adipisci pariatur earum itaque nam quos doloribus quo voluptatibus possimus debitis ratione eligendi necessitatibus tempore quaerat eaque quis explicabo nihil enim quasi! Ex, assumenda quod labore placeat sit veritatis ipsam iusto nulla nobis. Velit dolorem optio possimus consectetur impedit enim.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, saepe, adipisci pariatur earum itaque nam quos doloribus quo voluptatibus possimus debitis ratione eligendi necessitatibus tempore quaerat eaque quis explicabo nihil enim quasi! Ex, assumenda quod labore placeat sit veritatis ipsam iusto nulla nobis. Velit dolorem optio possimus consectetur impedit enim.
+        </div>
+        <div class="box" id="box03">BOX 3</div>
+        
+        
+        <script>
+            $(document).ready(function () {
+                var h_box1, ih_box1, oh_box1;
+                var h_box2, ih_box2, oh_box2;
+                var w_box2, iw_box2, ow_box2;
+                
+                h_box1 = $('#box01').height();
+                ih_box1 = $('#box01').innerHeight();
+                oh_box1 = $('#box01').outerHeight();
+                console.log(h_box1 +"-"+ ih_box1 +"-"+ oh_box1); //100-120-130
+                
+                h_box2 = $('#box02').height();
+                ih_box2 = $('#box02').innerHeight();
+                oh_box2 = $('#box02').outerHeight();
+                console.log(h_box2 +"-"+ ih_box2 +"-"+ oh_box2); //558-558-568
+                
+                w_box2 = $('#box02').width();
+                iw_box2 = $('#box02').innerWidth();
+                ow_box2 = $('#box02').outerWidth();
+                console.log(w_box2 +"-"+ iw_box2 +"-"+ ow_box2); //200-200-210
+                
+                $('.box').height(h_box2);
+            });
+        </script>
+    </body>
+</html>
+
