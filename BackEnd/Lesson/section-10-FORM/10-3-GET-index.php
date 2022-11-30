@@ -1,12 +1,8 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
-    
+/*  
  * PHUONG THUC GET
- * -> Thong tin truyen len duoc nhin thay tren url (khac vs POST)
+ * -> Thong tin truyen len CÓ THỂ NHÌN THẤY tren url (khac vs POST)
  * -> Cac thao tac giong nhu POST
  * -> Info duoc gui len link qua cau truc key=value va ket noi bang ky tu &
  * $q = $_GET['q'];
@@ -45,9 +41,10 @@ if(isset($_GET['btn_search'])){
     <body>
         <div class="form-container">
             <h1>SEARCH: </h1>
+            <!--<form action="10-3-GET-search.php" method="GET">--> 
             <form action="" method="GET"> 
                 Search: <input type="text" name="tim_kiem"/>
-                <input type="submit" name="btn_search" value="search"/>
+                <input type="submit" name="btn_search" value="Tìm Kiếm"/>
             </form>
         </div>
     </body>

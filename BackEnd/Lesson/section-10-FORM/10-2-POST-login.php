@@ -1,6 +1,7 @@
 <?php
 
-/* 
+/* FILE NÀY LÀ OPTION CỦA THUỘC TÍNH action trong form ở file index(tùy 
+ * vào ta có truyền tên file(này) vào action="" hay không.
  * 
  *  * NHAN DATA TU METHOD POST
  * -> Use mang he thong $_POST(bien global) de lay data truyen len theo POST
@@ -25,7 +26,7 @@ function show_data($data){
         echo "<pre>";
     }
 }
-//show_data($_SERVER); 
+show_data($_SERVER); //Lúc này: [REQUEST_METHOD] => POST
 
 // Kiem tra da submit form
 if($_SERVER['REQUEST_METHOD'] == 'POST'){ 

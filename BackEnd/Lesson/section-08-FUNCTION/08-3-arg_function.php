@@ -6,31 +6,38 @@
  * Ham bo tro(co san trong php)
  * -> Lay so luong tham so: func_num_args()
  * -> Lay gia tri tham so ham rieng le: func_get_arg(k)
- * -> Lay mang tham so ham: func_get_args()
+ * -> Lay mang tham so ham: func_get_args() (CÓ 'S' Ở ARG)
  */
+function show_data($data) {
+    if (is_array($data)) {
+        echo"<pre>";
+        print_r($data);
+        echo"</pre>";
+    }
+}
 function sum_number() {
-//    echo func_get_args();
-    //0 1 2 3
+    echo func_num_args(); // 6
+    echo "<br>";
+//    0 1 2 3
     $a = func_get_arg(0);
     $b = func_get_arg(1);
 
     echo "a = {$a} <br> b = {$b} ";
+    echo "<br>";
+    echo ($a + $b);
+    echo "<br>";
+    $list_args = func_get_args();
+    show_data($list_args);
 }
 
-sum_number(10, 20);
+sum_number(10, 20, 2, 6, 75, 23);
 
 echo "<br>";
 /**
   a = 10
   b = 20
  */
-function show_array($data) {
-    if (is_array($data)) {
-        echo"<pre>";
-        print_r($list_args);
-        echo"</pre>";
-    }
-}
+
 
 function sum_number_02() {
     $list_args = func_get_args();
@@ -81,7 +88,7 @@ function create_input_text($name, $value, $option = array()){
         $class  = $option['class'];
     }
     
-    show_array($option); 
+    show_data($option); 
     
     $input_html = "<input type='text' name='{$name}' value='{$value}' id='{$id}' class='{$class}'/>";
     echo $input_html;

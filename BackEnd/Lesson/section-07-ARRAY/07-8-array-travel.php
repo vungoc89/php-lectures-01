@@ -42,7 +42,7 @@ $info = array(
      $tong += $value;
 }
 
-echo "Tong: {$tong} ";
+echo "Tong: {$tong} "; //17
 
 //==============================================
 $list_user = array(

@@ -32,7 +32,7 @@ if(isset($_POST['btn_login'])){
                 
                 Password: <input type="password" name="password" id="password"/><br><br>
                 
-                <input type="submit" name="btn_login" value="login"/>
+                <input type="submit" name="btn_login" value="LOGIN - Đăng nhập"/>
             </form>
         </div>
     </body>

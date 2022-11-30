@@ -13,14 +13,35 @@ $list_even = array(0 => 0, 1 => 2, 2 => 4, 3 => 6, 4 => 8, 5 => 10);
 //Mang nhieu chieu danh sach thanh vien
 
 /**
- * KEY: Có thể là CHUỖI hoặc SỐ NGUYÊN
- * Nếu ko khai báo key thì key mặc định sẽ được tạo từ số 0 -> n phần tử
- * (tức là với array, nếu ko khai báo key thì vẫn luôn có key ngầm chạy )
+ * CAU TRUC MANG:
+ * KEY      KEY 1           KEY 1           KEY 1 ...
+ * VALUE    VALUE 1         VALUE 1         VALUE 1 ...
+ * 
+ * KEY: Có thể là CHUỖI hoặc SỐ NGUYÊN, dùng để phân biệt các ele.
+ * VALUE: giá trị của ele.
+ * (Key, Value): cặp info của mỗi ele.
+
  * 
  * //================================================
- * MẢNG RỖNG : DÙNG LÀM MẢNG KHỞI TẠO
+ * TYPE 1: MẢNG RỖNG : DÙNG LÀM MẢNG KHỞI TẠO
  * $error = array();
+ * 
+ * TYPE 2: Mảng với KEY mặc định
+ * Nếu ko khai báo key thì key mặc định sẽ được tạo từ số 0 -> n phần tử
+ * (tức là với array, nếu ko khai báo key thì vẫn luôn có key ngầm chạy )
+ * $list_even = array(0 => 0, 1 => 2, 2 => 4, 3 => 6, 4 => 8, 5 => 10);
+ * Cách viết rút gọn: 
+ * $list_even = array(0, 2, 4, 6, 8, 10);
+ * 
+ * TYPE 3: Mảng với KEY xác định
+ * Key      id      name        email
+ * Value    1       name01      email01
  */
+function show_data($data){
+    echo"<pre>";
+    print_r($data);
+    echo"</pre>";
+}
 
 $info = array(
     'id' => 1, 
@@ -103,5 +124,5 @@ $info = array(
     ),
 );
  
-// Xoa 1 phan tu trong mang nhieu chieu: unset($list_user[1]);
-//Xoa 1 field cua phan tu trong mang nhieu chieu: unset($list_user[1]['age']);
+// XÓA 1 phan tu trong mang nhieu chieu: unset($list_user[1]);
+//XÓA 1 field cua phan tu trong mang nhieu chieu: unset($list_user[1]['age']);

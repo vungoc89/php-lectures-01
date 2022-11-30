@@ -12,7 +12,8 @@
  * 7.implode -> ket hop string vs ky tu
  * 8.explode -> giai nen string (nguoc lai vs implode)
  * 9.htmlspecialchars :  Convert special characters to HTML entities
- * https://www.php.net/manual/en/function.htmlspecialchars
+ * ...
+ * See more: https://www.php.net/manual/en/function.htmlspecialchars
  * 
  */
 
