@@ -5,13 +5,18 @@ HIDDEN FIELD:
  * -> Là kiểu data KO HIỂN THỊ trên web giúp ta truyền dữ liệu ngầm
  * -> Dùng để truyền các info được điền sẵn trong form hoặc nhận giá trị 
  * trong quá trình user tương tác đến form.
+ * 
+ * Tức là dòng input dưới đây KO hiển thị lên giao diện.
+ * <input type="hidden" name="redirect_to" value="10-6-cart.php"/>
  */
 
    /** LOGIN FLOW
     * B1: Kiem tra data
-    * B2: Gan data
+    * B2: Gán data
     * B3: Kiem tra login
     * B4: Xu ly login
+    * --> Chuyển hướng cart.php
+    * --> Report: lỗi đăng nhập
     */
 function show_data($data){
     if(is_array($data)){
@@ -28,7 +33,9 @@ if(isset($_POST['btn_login'])){
         'username' => 'admin',
         'password' => 'abc123',
     );
-    $error = array();
+    
+    $error = array();//Khởi tạo mảng error vs empty value
+    
     if(empty($_POST['username'])){
 //        echo "Khong duoc de trong username";
         $error['username'] = "Khong duoc de trong username";
