@@ -15,8 +15,10 @@
  * $_FILES['file']['name'] => Ten file
  * $_FILES['file']['type'] => Loai file
  * $_FILES['file']['size'] => Kich thuoc file
- * $_FILES['file']['tmp_name'] => Duong dan tam of file
+ * $_FILES['file']['tmp_name'] => Duong dan tạm of file
  * $_FILES['file']['error'] => Thong bao loi
+ * 
+ * Use func move_uploaded_file() ĐỂ MOVE FILE ĐẾN FOLDER CẦN XỬ LÝ.
  */
 
 //4. XU LY UPLOAD

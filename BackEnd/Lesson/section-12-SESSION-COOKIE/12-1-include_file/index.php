@@ -1,6 +1,8 @@
 <?php
 require 'lib/show_data.php';
-require 'inc/header.php';
+require 'lib/func_get_html.php';
+//require 'inc/header.php';//C1
+get_header();//C2
 ?>
 
 <div id="content">
@@ -12,5 +14,6 @@ require 'inc/header.php';
 </div>
 
 <?php
-require 'inc/footer.php';
+//require 'inc/footer.php';//C1
+get_footer();//C2
 ?>   

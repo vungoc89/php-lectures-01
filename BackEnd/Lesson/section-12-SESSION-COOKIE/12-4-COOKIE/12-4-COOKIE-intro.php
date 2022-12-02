@@ -18,7 +18,7 @@
  * -> $domain: tên miền cookie có hiệu lực
  * 
  * VD: 
- * <?php setcookie('is_login', true, time()+3600, '/'); ?>
+ * <?php setcookie('is_login', true, time() + 3600, '/'); ?>
  * 
  * LẤY VALUE COOKIE
  * -> Biến toàn cục $_COOKIE là nơi lưu info của cookie
