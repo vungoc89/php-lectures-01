@@ -32,6 +32,10 @@ if (!is_login() && $page != 'login') {
     redirect_to("?page=login");
 }
 
+//if (!is_login() && $page != 'loginNEW') { //TEST 21-2 OK
+//    redirect_to("?page=loginNEW");
+//}
+
 if (file_exists($path)) {
     require $path;
 } else {

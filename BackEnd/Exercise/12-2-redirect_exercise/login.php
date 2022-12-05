@@ -1,6 +1,6 @@
 <?php
 //XEM content ban đầu(chưa refactor) tại : 11-5-OLD-reuse-validate.php
-
+require 'library/func_redirect.php';
 require 'func-for-validate/func-validate.php';
 /*
  */
@@ -54,7 +54,8 @@ if (isset($_POST['btn_login'])) {
         ];
         if ($username == $info_data['username'] && $password == $info_data['password']) {
             //REDIRECT FILE: USE header() which is available function of php
-            header("Location: index.php");
+//            header("Location: index.php");
+              redirect_to("index.php");
         }else{
             echo "Sai thong tin dang nhap hoac Tai khoan khong ton tai";
         }

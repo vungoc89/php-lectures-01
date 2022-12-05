@@ -9,4 +9,4 @@ Câu lệnh:
  * Cần chạy hàm ob_start() trước khi gọi câu lệnh chuyển hướng
  */
 
-echo "THis is homepage";
+echo "This is homepage";

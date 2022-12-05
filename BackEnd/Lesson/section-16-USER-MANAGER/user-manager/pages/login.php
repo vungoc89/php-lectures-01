@@ -92,7 +92,7 @@ if(isset($_POST['btn-login'])){
                  <input type="checkbox" name="remember_me" id="">
                 <label for="remember_me">Save login</label>
                 
-                <input type="submit" name="btn-login" id="btn-login" value="Đăng nhập">
+                <input type="submit" name="btn-login" id="btn-login" value="Đăng ký">
                 <?php echo form_error('account'); ?>
             </form>
             <a href="" id="miss-pass">Miss password?</a>

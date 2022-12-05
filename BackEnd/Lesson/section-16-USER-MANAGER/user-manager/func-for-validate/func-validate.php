@@ -6,6 +6,12 @@ function is_username($username) {
                     return false;
             return true;
 }
+function is_fullname($fullname) {
+    $pattern = "/^[A-Za-z0-9_\.]{6,32}$/";
+            if(!preg_match($pattern, $fullname, $matchs))
+                    return false;
+            return true;
+}
 
 function is_password($password) {
     $pattern = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/";

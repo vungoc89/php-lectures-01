@@ -3,9 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/phpLectures01/BackEnd/Lesson/section-09-FUNCTION-MATH/09-2-func-ARRAY.php</file>
-            <file>file:/C:/xampp/htdocs/phpLectures01/BackEnd/Lesson/section-09-FUNCTION-MATH/09-3-func-STRING.php</file>
-            <file>file:/C:/xampp/htdocs/phpLectures01/BackEnd/Lesson/section-09-FUNCTION-MATH/09-5-FOREACH-ly-thuyet.php</file>
+            <file>file:/C:/xampp/htdocs/phpLectures01/BackEnd/Lesson/section-21/php_mysql/index.php</file>
+            <file>file:/C:/xampp/htdocs/phpLectures01/BackEnd/Lesson/section-21/php_mysql/modules/users/add.php</file>
+            <file>file:/C:/xampp/htdocs/phpLectures01/BackEnd/Lesson/section-21/php_mysql/library/func_include.php</file>
+            <file>file:/C:/xampp/htdocs/phpLectures01/BackEnd/Lesson/section-21/php_mysql/modules/users/update.php</file>
+            <file>file:/C:/xampp/htdocs/phpLectures01/BackEnd/Lesson/section-21/php_mysql/library/func_redirect.php</file>
+            <file>file:/C:/xampp/htdocs/phpLectures01/BackEnd/Lesson/section-21/php_mysql/modules/users/delete.php</file>
+            <file>file:/C:/xampp/htdocs/phpLectures01/BackEnd/Lesson/section-21/php_mysql/modules/users/main.php</file>
         </group>
     </open-files>
 </project-private>
