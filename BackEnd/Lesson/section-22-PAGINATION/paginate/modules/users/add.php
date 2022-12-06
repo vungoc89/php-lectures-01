@@ -105,6 +105,9 @@ if (isset($_POST['btn_reg'])) {
         ];
        $id_insert = db_insert("tbl_users", $data);
 //       echo $id_insert;//ok
+       if(isset($id_insert)){
+           $success['success'] = "Add user is success";
+       }
     }
 }
 ?>

@@ -9,6 +9,7 @@ require 'library/func_include.php';
 require 'library/func-validate.php';
 require 'library/func_redirect.php';
 require 'library/func_users.php';
+require 'library/func_pagging.php';
 ?>
 
 <?php
